@@ -1,0 +1,889 @@
+Delivered-To: rdolphearl1979@gmail.com
+Received: by 2002:ab0:20e:0:0:0:0:0 with SMTP id 14csp742858uas;
+        Wed, 8 Jul 2020 09:09:37 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwCyLdP96StMJOzhU4ajJrujuvTU5jLe74pGcVy5SsrGeWHdXXaBdbOBJBkq5a91GzVBVEF
+X-Received: by 2002:a05:6830:1201:: with SMTP id r1mr36130520otp.286.1594224577237;
+        Wed, 08 Jul 2020 09:09:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1594224577; cv=none;
+        d=google.com; s=arc-20160816;
+        b=rr/evAsg8PxjK0KjeDFp+fAylo9sCdwJSKBl9iaZ4Um6fij2aBGZNhZ0b0VIN0rxYG
+         IRa7L1AQWsMoUqkK1vV+19ab42BdG973lZEajBQIZ+EMsPBCNBkBcACr/ZY9jL376tQt
+         GxuU/zlctM3i+cgHywIfKLBvaPzEfsALU8cakfLZqSS4PEQTHmYOHIkFN5C0Nvdv9K7W
+         bMsPpONOIC2KdX4FtaZ1KVpWNbEAQrj0KX+6iWrKY15dK7N+QJLNvIMPoyTPJXtUWi6T
+         qo3cLDdAXCAfz8sn+Cc06oQJojl/I8VoQTcAyxM6uUltkUcMPtX1/ifbebwXCEeTU1X5
+         A+YA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:from:to:reply-to:message-id:sender:date
+         :list-unsubscribe:list-unsubscribe-post:dkim-signature
+         :dkim-signature;
+        bh=4TsURp/Yts+znd2YZHemtjkG0EZ48mnmzSIelJNAaRs=;
+        b=qB8+qYwLAjBu92c+fctzBM4tx5cgmVwZ620RIqDNi3VP+Udx0kyBKswbgBGqACVBwm
+         mys5o7ftKJjeL77iZV4f90LjiBClF9FoIq6qtAsKxzAaLCrB6skbu3PtB+SbxLSKLePc
+         +G7vuAC6+bU9CEAOjpqHDAazSO63OXdNBwUEF8qs8PePtWcF9d4TnFdSVPyFcS3MXS5D
+         3L3n3CVOL6hpKRFjcjDd3VyK5OA77ag3dTJt4yGOm7pnMspiHz1gD2R8aMWEM9BpN7I0
+         1575qhloyGQDEoC9f5nS9bh3qR5aaXoGRJcB1ZARH9LaH7EzefiECR9D5sduFxhNk+Me
+         r8Bg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@c.kajabimail.net header.s=k1 header.b=ZXA9f2XB;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=jaaK8mFl;
+       spf=pass (google.com: domain of bounce+79f400.55ddb-randolphearl1979=gmail.com@c.kajabimail.net designates 104.130.122.253 as permitted sender) smtp.mailfrom="bounce+79f400.55ddb-randolphearl1979=gmail.com@c.kajabimail.net"
+Return-Path: <bounce+79f400.55ddb-randolphearl1979=gmail.com@c.kajabimail.net>
+Received: from mail253.static.kajabimail.net (mail253.static.kajabimail.net. [104.130.122.253])
+        by mx.google.com with UTF8SMTPS id e48si50137ote.42.2020.07.08.09.09.23
+        for <randolphearl1979@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 08 Jul 2020 09:09:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+79f400.55ddb-randolphearl1979=gmail.com@c.kajabimail.net designates 104.130.122.253 as permitted sender) client-ip=104.130.122.253;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@c.kajabimail.net header.s=k1 header.b=ZXA9f2XB;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=jaaK8mFl;
+       spf=pass (google.com: domain of bounce+79f400.55ddb-randolphearl1979=gmail.com@c.kajabimail.net designates 104.130.122.253 as permitted sender) smtp.mailfrom="bounce+79f400.55ddb-randolphearl1979=gmail.com@c.kajabimail.net"
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=c.kajabimail.net; q=dns/txt; s=k1; t=1594224577; h=Content-Type: Mime-Version: Subject: From: To: Reply-To: Message-Id: Sender: Date: List-Unsubscribe: List-Unsubscribe-Post: X-Feedback-Id; bh=4TsURp/Yts+znd2YZHemtjkG0EZ48mnmzSIelJNAaRs=; b=ZXA9f2XBRL9QstFeLgncyiSGyYJMN0NBFDb1Fs22vAiyFVN21t1ky2wp2Cm5ghq8Ud+kH5ow 5gGvvCs3v7ytx7rS0AhxJ8ciqTkfQrncCbjkKp9db9T3t40qd+4V1U6Gk+TqJkN/pidvI/4l aCVGoMtEcJwfw5pjhb3VglniRjA=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1594224577; h=Content-Type: Mime-Version: Subject: From: To: Reply-To: Message-Id: Sender: Date: List-Unsubscribe: List-Unsubscribe-Post: X-Feedback-Id; bh=4TsURp/Yts+znd2YZHemtjkG0EZ48mnmzSIelJNAaRs=; b=jaaK8mFlIGFm54SqneHqaXYThJuCrNvk8w+R0tIekEnUuuL5+0vMpx6wS3Xq3qvr37m/9XwW 33S0qTV5CDYAqBdi6hYxDnca8VMNRf7zUNqWGSZafOtud8AvsQFgyR4iHQUwWj3wRVYI0z2E vfECzB1/nxEkg8jhGHGqJIrgTAo=
+X-Feedback-Id: 56d8c5e8f3b9c4469e77ad48:mailgun
+X-Mailgun-Sending-Ip: 104.130.122.253
+X-Mailgun-Sid: WyJhZmI0NSIsICJyYW5kb2xwaGVhcmwxOTc5QGdtYWlsLmNvbSIsICI1NWRkYiJd
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <mailto:u+mq6tknlemrrcm2j5giydembqg4ydqmjwga4dkmrogexdqnjrgeztsmcchbcdkrjwiqydojjugbrs423bnjqwe2lnmfuwyltomv2cm2b5gi3tayzrmnsdazlemeygemzvgq2donjvg4zdqobtmvqtamzvge3cmzlnmfuwyx3emvwgs5tfoj4v62lehuytqmjvga4tknjtgutheplsmfxgi33mobugkylsnqytsnzzeu2daz3nmfuwyltdn5wsm5b5knuxizjljfcckmrtguztcmjt@c.kajabimail.net>, <https://link.mailgun.com/u/eJwdjkEOgjAQAF9DLybNbsvS9tCLwYNnH0BKdyPVAoYQE38vep_MDEci5lGVaMAAOPDYgSejUXtCtAHOvqdL14NrWsj6mR5pLHMqVS-yqykaBxkzg3CC0VLbOiJnvLeSwBJ2Sn7wwFLLW7bPUDiiR4JAZEltcUsLr_U1SdoqBheOyv2vz-us9ngru5yufWMs2WPnC4RDMhc>
+X-Mailgun-Batch-Id: 5f05ef94cd1b803e17cf255c
+Received: by luna.mailgun.net with HTTP; Wed, 08 Jul 2020 16:08:52 +0000
+Date: Wed, 08 Jul 2020 16:08:52 +0000
+Sender: tmadrid=fiveverlove.com@c.kajabimail.net
+Message-Id: <20200708160852.1.8511390B8D5E6D07@c.kajabimail.net>
+X-Mailgun-Variables: {"email_delivery_id": "1815095535"}
+Reply-To: tmadrid@fiveverlove.com
+X-Mailgun-Track: true
+X-Mailgun-Drop-Message: false
+X-Mailgun-Tag: Site ID#53113
+To: randolphearl1979@gmail.com
+From: Lino Madrid <tmadrid@fiveverlove.com>
+Subject: Randy, I bet you’re dang good at being the bigger person!
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary="cd57204ba7694797a68ff0e6fa6df5b7"
+
+--cd57204ba7694797a68ff0e6fa6df5b7
+Content-Type: text/plain; charset="utf-8"
+Mime-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+I=E2=80=99m willing to bet, Randy, that you are
+INCREDIBLY committed to this whole, long-term relationship thing!
+
+So much so=E2=80=A6 that I bet you find yourself doing the following a
+LOT!
+
+* Sacrificing your happiness for the good of the relationship.
+* Apologizing when it=E2=80=99s the right thing to do.
+* Taking responsibility when you mess up (even when your partner
+doesn=E2=80=99t).
+* Letting the unimportant things go.
+* Being there for your partner when they=E2=80=99re down.
+* Prioritizing their needs in your decision making.
+
+And maybe, you even take a little bit of pride in the sacrifice
+and hard work.
+
+After all, aren=E2=80=99t successful relationships SUPPOSED to be the
+hardest thing you=E2=80=99ll ever do?
+
+Aren=E2=80=99t they SUPPOSED to be about sacrificing happiness for the
+ultimate goal of being together for decades?
+
+I mean c=E2=80=99mon=E2=80=A6 they don=E2=80=99t use terms like =E2=80=9Cba=
+ll and chain=E2=80=9D for
+nothing right=E2=80=A6?
+
+.
+=E2=80=A6
+=E2=80=A6=E2=80=A6right?
+
+But maybe=E2=80=A6 JUST MAYBE you start to think the same thoughts that I
+did=E2=80=A6
+
+The same thoughts that most couples have:
+
+=E2=80=9CCan I really do this long-term?=E2=80=9D
+=E2=80=9CAm I just trying to force something that isn=E2=80=99t meant to wo=
+rk
+out?=E2=80=9D
+=E2=80=9CDo we both have this same feeling like something is missing?=E2=80=
+=9D
+
+BUT if you=E2=80=99re like most good partners with strong values of
+loyalty and commitment, you suppress these thoughts as best you
+can.
+
+Because you and I both know these thoughts lead to very painful
+destinations:
+
+What if you=E2=80=99ve WASTED months, years, or decades of your life?
+What if you=E2=80=99re actually NOT worthy of a fairy-tale love like the
+movies?
+
+And maybe the scariest of all=E2=80=A6
+
+What if this is as good as it=E2=80=99s going to get.
+
+What if your relationship is doomed to the same fate as MOST
+relationships=E2=80=A6
+
+=E2=80=A6 a life of =E2=80=9Cokay enough=E2=80=9D connection and sex.
+
+If you=E2=80=99re frustrated like I was, Randy, you
+might think, =E2=80=9CWhen the heck is this incredible relationship thing
+supposed to happen?=E2=80=9D
+
+The answer=E2=80=A6
+
+Whenever you decide that it should!
+
+Click here to discover a new way of having long-term relationship
+success. ( http://email.c.kajabimail.net/c/eJwdjsGKwjAURb-m2QyEl8TXJosslM6A=
+6_kASfqe02i0EkOLfz9RuKsD93DIIxJFkbwGDTCAVT1Y1FJJi0oZBwc74nc_wtDtYJLXcAkx3UL=
+K8s5VzN4hR9btRZYGitq5XZhs7KOOwP2EIvu51sezM_tO_7Rt2ybPaeWVS15WltNya_RNNubrU_=
+BbfiLOjZTXKZFXViE4RIOi-BLutOTHzKFk5QbXqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMRAo )
+
+The sad truth is that most will never even TASTE the full
+potential of their connection and sex in the relationship that=E2=80=99s
+long been promised to them.
+
+They become kidnapped by the =E2=80=9Cit should be difficult=E2=80=9D menta=
+lity
+and because of that their connection and sex will always be held
+captive by:
+
+* The never-ending (and unnecessary) struggle of recurring
+arguments
+* The demotivating feeling of =E2=80=9Cnothing ever works so why try=E2=80=
+=9D
+* The common =E2=80=9Cit=E2=80=99s not THAT bad=E2=80=9D justification
+
+So here=E2=80=99s what you need to know to break the trend of endless
+relationship unhappiness=E2=80=A6
+
+By itself, just being in a relationship =E2=89=A0 relationship happiness
+
+And that=E2=80=99s why today, I invite you to invest that hard work
+mentality NOT in recurring arguments, suppressing happiness or
+forcing effort through hopelessness=E2=80=A6
+
+But instead in creating your own REAL-LIFE relationship happiness
+( http://email.c.kajabimail.net/c/eJwdjsGKwjAURb-m2QyEl8TXJosslM6A6_kASfqe0=
+2i0EkOLfz9RuKsD93DIIxJFkbwGDTCAVT1Y1FJJi0oZBwc74nc_wtDtYJLXcAkx3ULK8s5VzN4h=
+R9btRZYGitq5XZhs7KOOwP2EIvu51sezM_tO_7Rt2ybPaeWVS15WltNya_RNNubrU_BbfiLOjZT=
+XKZFXViE4RIOi-BLutOTHzKFk5QbXqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMRAo ) that gives y=
+ou control
+of creating incredible connection and a mind-blowing sex life.
+
+That introduces you to the ever-elusive =E2=80=9Chappily ever after=E2=80=
+=9D
+you=E2=80=99ve been seeking since the day you committed to your partner.
+
+And if you want to know the clearest, most reliable path towards
+creating the relationship of your dreams=E2=80=A6
+
+I invite you to join the next group of connection creators and
+desire builders ( http://email.c.kajabimail.net/c/eJwdjsGKwjAURb-m2QyEl8TXJ=
+osslM6A6_kASfqe02i0EkOLfz9RuKsD93DIIxJFkbwGDTCAVT1Y1FJJi0oZBwc74nc_wtDtYJLX=
+cAkx3ULK8s5VzN4hR9btRZYGitq5XZhs7KOOwP2EIvu51sezM_tO_7Rt2ybPaeWVS15WltNya_R=
+NNubrU_BbfiLOjZTXKZFXViE4RIOi-BLutOTHzKFk5QbXqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMRA=
+o ) in my
+brand new program:
+
+( http://email.c.kajabimail.net/c/eJwdjsGKwjAURb-m2QyEl8TXJosslM6A6_kASfqe0=
+2i0EkOLfz9RuKsD93DIIxJFkbwGDTCAVT1Y1FJJi0oZBwc74nc_wtDtYJLXcAkx3ULK8s5VzN4h=
+R9btRZYGitq5XZhs7KOOwP2EIvu51sezM_tO_7Rt2ybPaeWVS15WltNya_RNNubrU_BbfiLOjZT=
+XKZFXViE4RIOi-BLutOTHzKFk5QbXqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMRAo )
+
+Five weeks to Fivever Love isn=E2=80=99t one of those fluffy =E2=80=9Ckumba=
+ya=E2=80=9D
+courses as much as it is a meticulously created implementation
+program.
+
+It includes 5 rigorously tested phases that will bring you from:
+
+=E2=80=9CWhere the heck do I even START?=E2=80=9D
+To=E2=80=A6
+=E2=80=9CWoah! I didn=E2=80=99t think I=E2=80=99d EVER feel these butterfli=
+es again!=E2=80=9D
+
+You can get the full scoop here, Randy=20
+( http://email.c.kajabimail.net/c/eJwdjsGKwjAURb-m2QyEl8TXJosslM6A6_kASfqe0=
+2i0EkOLfz9RuKsD93DIIxJFkbwGDTCAVT1Y1FJJi0oZBwc74nc_wtDtYJLXcAkx3ULK8s5VzN4h=
+R9btRZYGitq5XZhs7KOOwP2EIvu51sezM_tO_7Rt2ybPaeWVS15WltNya_RNNubrU_BbfiLOjZT=
+XKZFXViE4RIOi-BLutOTHzKFk5QbXqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMRAo ).
+
+Here=E2=80=99s to reclaiming your incredible relationship=E2=80=A6
+
+=E2=80=A6and re-directing your hard work to get you there.
+
+-Lino
+
+P.S. I want to make sure that I don=E2=80=99t take away from your
+hard-work mentality that has kept your relationship going for as
+long as it has.
+Instead, I want you to fight against the lies that have been fed
+to us by the media.
+
+Since when has never-ending difficulty and sacrifice EVER been an
+indication of success in ANY area of life?
+
+Of course your relationship is going to take work, but you don=E2=80=99t
+have to buy into the rallying cry of other couples that never
+learned the tools to make success a smooth ride.
+
+So I want you to step aside from all the insistence on long-term
+SACRIFICE and DIFFICULTY (blegh) and ask yourself: =E2=80=9CIs my
+hard-work being used in the right ways?...=E2=80=9D
+
+=E2=80=9C=E2=80=A6Or is it time to channel that hard work into strategies a=
+nd
+tools that make my love game so strong, that sacrifice turns into
+mutual happiness ( http://email.c.kajabimail.net/c/eJwdjsGKwjAURb-m2QyEl8TX=
+JosslM6A6_kASfqe02i0EkOLfz9RuKsD93DIIxJFkbwGDTCAVT1Y1FJJi0oZBwc74nc_wtDtYJL=
+XcAkx3ULK8s5VzN4hR9btRZYGitq5XZhs7KOOwP2EIvu51sezM_tO_7Rt2ybPaeWVS15WltNya_=
+RNNubrU_BbfiLOjZTXKZFXViE4RIOi-BLutOTHzKFk5QbXqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMR=
+Ao )?=E2=80=9D
+
+In the future, if you are not interested in receiving emails
+related to Five Weeks to Fivever Love, just click here.=20
+( http://email.c.kajabimail.net/c/eJwtT8tuwyAQ_BpzqYQWyAY4cGjlVOq5HxAtYV3TY=
+jsixFL-vvQhzWlmNI8UEFOKIgcNGsCCU0dwqKWSDpUyHl7ciKfjCHY4wEV-0SfFvFAucuUm5tC9=
+LnkbDRNOaKwDVB5TnNARJSJRwtza9TaY50G_dkx5551r2XaWy-MvT1625V-6r7d7FPzTcE5cOlM=
+f55yCcgrBIxoUNVRa01auM1Mtylvfp338buo5ooX33PjpbRy0QdM_fAPW_kXL )
+
+Unsubscribe=20
+( http://email.c.kajabimail.net/c/eJxFkElqxDAQRU8jb4JNaZYWWiQ4DVnnAKY0pFux2=
+zayHMjtozSBQC0-Nf560UkZo--yY8AANBiqwEg20MFISrmFFzPKVzWCJgLCMOMn-nzHvAxrqt3N=
+CWWCTpoxH6MWAIJ7moxM1HMUCUO3uFut-0H4M2GXFrjvf1uGsN1bImxrxVCPJk3zIBlTTR6nP0L=
+Je83bSvgl5kj4SA2VYKXkkjB1zHmfwpLDPNWCYc7rtbXUcqZWPM_HgAUwAbjqjVe-F9Fij9589C=
+ikFREjGqq79PvOFNOSv1L5nnJ0_3e64gqucVv2W8KyUKtt43B9AGj2u-rec01PbyNhXPIG7AeWN=
+GSV )
+ |
+Sent by Fivever Love
+
+7926 Valladolid Avenue =E2=80=A2 Las Vegas, Nevada =E2=80=A2 89178
+--cd57204ba7694797a68ff0e6fa6df5b7
+Content-Type: text/html; charset="utf-8"
+Mime-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns=3D"http://www.w3.org/199=
+9/xhtml" style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; font-size: inherit; margin: 0;">
+  <head>
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width" />
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+   =20
+        <title>Randy, I bet you=E2=80=99re dang good at being the bigger pe=
+rson!</title>
+
+  </head>
+
+  <body itemscope=3D"" itemtype=3D"http://schema.org/EmailMessage" style=3D=
+"-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; box-s=
+izing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-se=
+rif; font-size: 14px; height: 100%; line-height: 1.6; margin: 0; width: 100=
+% !important;" bgcolor=3D"#ffffff"><style type=3D"text/css">
+img {
+max-width: 100%;
+}
+body {
+font-size: 14px; line-height: 1.6; width: 100% !important; height: 100%; -w=
+ebkit-font-smoothing: antialiased; -webkit-text-size-adjust: none;
+}
+body {
+background-color: #ffffff;
+}
+@media only screen and (max-width: 640px) {
+  body {
+    padding: 0 !important;
+  }
+  .body-tinymce {
+    padding: 15px !important;
+  }
+  h1 {
+    font-weight: 800 !important; margin: 20px 0 5px !important;
+  }
+  h2 {
+    font-weight: 800 !important; margin: 20px 0 5px !important;
+  }
+  h3 {
+    font-weight: 800 !important; margin: 20px 0 5px !important;
+  }
+  h4 {
+    font-weight: 800 !important; margin: 20px 0 5px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    width: 100% !important; padding: 0 !important;
+  }
+  .content {
+    padding: 0 !important;
+  }
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .invoice {
+    width: 100% !important;
+  }
+}
+</style>
+
+    <table class=3D"body-wrap" style=3D"box-sizing: border-box; font-family=
+: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; margi=
+n: 0; width: 100%;" bgcolor=3D"#ffffff">
+     =20
+
+<tr style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;">
+  <td style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helve=
+tica, Arial, sans-serif; font-size: inherit; margin: 0;" valign=3D"top"></t=
+d>
+  <td class=3D"container" width=3D"600" style=3D"box-sizing: border-box; cl=
+ear: both !important; display: block !important; font-family: 'Helvetica Ne=
+ue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0 auto; max-=
+width: 600px !important;" valign=3D"top">
+    <div class=3D"content" style=3D"box-sizing: border-box; display: block;=
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: in=
+herit; margin: 0 auto; max-width: 600px; padding: 20px;">
+
+      <table class=3D"main" width=3D"100%" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0; max-width: 560px;" bg=
+color=3D"#ffffff">
+        <tr style=3D"box-sizing: border-box; font-family: 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;">
+          <td class=3D"content-wrap" style=3D"box-sizing: border-box; font-=
+family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit;=
+ margin: 0; padding: 20px;" valign=3D"top">
+              <table class=3D"table-fixed" width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"box-sizing: border-box; font-family: 'Helvetica=
+ Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0; table-=
+layout: fixed;">
+               =20
+  <tr style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helve=
+tica, Arial, sans-serif; font-size: inherit; margin: 0;">
+    <td class=3D"content-block no-padding" style=3D"box-sizing: border-box;=
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: in=
+herit; margin: 0; padding: 0;" valign=3D"top">
+      <p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; font-size: inherit; font-weight: normal; margin=
+: 0 0 20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-fa=
+mily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; marg=
+in: 0;">I=E2=80=99m willing to bet, Randy, that you are INCREDIBLY committe=
+d to this whole, long-term relationship thing!</span><br style=3D"box-sizin=
+g: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;=
+ font-size: inherit; margin: 0;" /><span style=3D"box-sizing: border-box; c=
+olor: #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;=
+ font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-box; font-fam=
+ily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; ma=
+rgin: 0;" />So much so=E2=80=A6 that I bet you find yourself doing the foll=
+owing a LOT!</span></p>
+<ul style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0=
+ 20px; padding-left: 15px;">
+<li style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;"><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">Sacrificing your happines=
+s for the good of the relationship.</span></li>
+<li style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;"><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">Apologizing when it=E2=80=
+=99s the right thing to do.</span></li>
+<li style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;"><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">Taking responsibility whe=
+n you mess up (even when your partner doesn=E2=80=99t).</span></li>
+<li style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;"><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">Letting the unimportant t=
+hings go.</span></li>
+<li style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;"><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">Being there for your part=
+ner when they=E2=80=99re down.</span></li>
+<li style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;"><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">Prioritizing their needs =
+in your decision making.</span></li>
+</ul>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">And maybe, you even take a little bit of pride in the sacrifice and hard =
+work.</span><br style=3D"box-sizing: border-box; font-family: 'Helvetica Ne=
+ue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" /><span =
+style=3D"box-sizing: border-box; color: #313f4c; font-family: 'Helvetica Ne=
+ue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;"><br style=
+=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: inherit; margin: 0;" />After all, aren=E2=80=99t s=
+uccessful relationships SUPPOSED to be the hardest thing you=E2=80=99ll eve=
+r do?</span><br style=3D"box-sizing: border-box; font-family: 'Helvetica Ne=
+ue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" /><span =
+style=3D"box-sizing: border-box; color: #313f4c; font-family: 'Helvetica Ne=
+ue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;"><br style=
+=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: inherit; margin: 0;" />Aren=E2=80=99t they SUPPOSE=
+D to be about sacrificing happiness for the ultimate goal of being together=
+ for decades?</span><br style=3D"box-sizing: border-box; font-family: 'Helv=
+etica Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" =
+/><span style=3D"box-sizing: border-box; color: #313f4c; font-family: 'Helv=
+etica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;"><br=
+ style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif; font-size: inherit; margin: 0;" />I mean c=E2=80=99mon=
+=E2=80=A6 they don=E2=80=99t use terms like =E2=80=9Cball and chain=E2=80=
+=9D for nothing right=E2=80=A6?</span><br style=3D"box-sizing: border-box; =
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inh=
+erit; margin: 0;" /><span style=3D"box-sizing: border-box; color: #313f4c; =
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12p=
+t; margin: 0;"><br style=3D"box-sizing: border-box; font-family: 'Helvetica=
+ Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" />.</=
+span><br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; font-size: inherit; margin: 0;" /><span style=
+=3D"box-sizing: border-box; color: #313f4c; font-family: 'Helvetica Neue', =
+Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;">=E2=80=A6</span>=
+<br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box=
+-sizing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: 12pt; margin: 0;">=E2=80=A6=E2=80=A6right=
+?</span><br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" /><span styl=
+e=3D"box-sizing: border-box; color: #313f4c; font-family: 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;"><br style=3D"bo=
+x-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans=
+-serif; font-size: inherit; margin: 0;" />But maybe=E2=80=A6 JUST MAYBE you=
+ start to think the same thoughts that I did=E2=80=A6</span><br style=3D"bo=
+x-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans=
+-serif; font-size: inherit; margin: 0;" /><span style=3D"box-sizing: border=
+-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial, sans=
+-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-box; f=
+ont-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inhe=
+rit; margin: 0;" />The same thoughts that most couples have:</span><br styl=
+e=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box-sizing:=
+ border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border=
+-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-siz=
+e: inherit; margin: 0;" />=E2=80=9CCan I really do this long-term?=E2=80=9D=
+</span><br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', =
+Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" /><span style=
+=3D"box-sizing: border-box; color: #313f4c; font-family: 'Helvetica Neue', =
+Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;">=E2=80=9CAm I ju=
+st trying to force something that isn=E2=80=99t meant to work out?=E2=80=9D=
+</span><br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', =
+Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" /><span style=
+=3D"box-sizing: border-box; color: #313f4c; font-family: 'Helvetica Neue', =
+Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;">=E2=80=9CDo we b=
+oth have this same feeling like something is missing?=E2=80=9D</span></p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">BUT if you=E2=80=99re like most good partners with strong values of loyal=
+ty and commitment, you suppress these thoughts as best you can.</span><br s=
+tyle=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, A=
+rial, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box-sizi=
+ng: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica, A=
+rial, sans-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing: bor=
+der-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-=
+size: inherit; margin: 0;" />Because you and I both know these thoughts lea=
+d to very painful destinations:</span><br style=3D"box-sizing: border-box; =
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inh=
+erit; margin: 0;" /><span style=3D"box-sizing: border-box; color: #313f4c; =
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12p=
+t; margin: 0;"><br style=3D"box-sizing: border-box; font-family: 'Helvetica=
+ Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" />Wha=
+t if you=E2=80=99ve WASTED months, years, or decades of your life?</span><b=
+r style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">What if you=E2=80=99re ac=
+tually NOT worthy of a fairy-tale love like the movies?</span></p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">And maybe the scariest of all=E2=80=A6</span></p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">What if this is as good as it=E2=80=99s going to get.</span><br style=3D"=
+box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sa=
+ns-serif; font-size: inherit; margin: 0;" /><span style=3D"box-sizing: bord=
+er-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial, sa=
+ns-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-box;=
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: in=
+herit; margin: 0;" />What if your relationship is doomed to the same fate a=
+s MOST relationships=E2=80=A6</span><br style=3D"box-sizing: border-box; fo=
+nt-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inher=
+it; margin: 0;" /><span style=3D"box-sizing: border-box; color: #313f4c; fo=
+nt-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt;=
+ margin: 0;"><br style=3D"box-sizing: border-box; font-family: 'Helvetica N=
+eue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" />=E2=
+=80=A6 a life of =E2=80=9Cokay enough=E2=80=9D connection and sex.</span></=
+p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">If you=E2=80=99re frustrated like I was, Randy, you might think, =E2=80=
+=9CWhen the heck is this incredible relationship thing supposed to happen?=
+=E2=80=9D</span></p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">The answer=E2=80=A6</span></p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">Whenever you decide that it should!</span></p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #1dd8f4; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+"><a style=3D"-ms-word-break: break-all; box-sizing: border-box; color: #1d=
+d8f4; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-siz=
+e: inherit; margin: 0; overflow-wrap: break-word; text-decoration: underlin=
+e; word-break: break-word; word-wrap: break-word;" href=3D"http://email.c.k=
+ajabimail.net/c/eJwdjsGKwjAURb-m2QyEl8TXJosslM6A6_kASfqe02i0EkOLfz9RuKsD93D=
+IIxJFkbwGDTCAVT1Y1FJJi0oZBwc74nc_wtDtYJLXcAkx3ULK8s5VzN4hR9btRZYGitq5XZhs7K=
+OOwP2EIvu51sezM_tO_7Rt2ybPaeWVS15WltNya_RNNubrU_BbfiLOjZTXKZFXViE4RIOi-BLut=
+OTHzKFk5QbXqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMRAo">Click here to discover a new wa=
+y of having long-term relationship success.</a></span></p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">The sad truth is that most will never even TASTE the full potential of th=
+eir connection and sex in the relationship that=E2=80=99s long been promise=
+d to them.</span></p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">They become kidnapped by the =E2=80=9Cit should be difficult=E2=80=9D men=
+tality and because of that their connection and sex will always be held cap=
+tive by:</span><span style=3D"box-sizing: border-box; color: #313f4c; font-=
+family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; ma=
+rgin: 0;"><br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue=
+', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" /></span><=
+/p>
+<ul style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0=
+ 20px; padding-left: 15px;">
+<li style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;"><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">The never-ending (and unn=
+ecessary) struggle of recurring arguments</span></li>
+<li style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;"><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">The demotivating feeling =
+of =E2=80=9Cnothing ever works so why try=E2=80=9D</span></li>
+<li style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;"><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">The common =E2=80=9Cit=E2=
+=80=99s not THAT bad=E2=80=9D justification</span></li>
+</ul>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">So here=E2=80=99s what you need to know to break the trend of endless rel=
+ationship unhappiness=E2=80=A6</span><br style=3D"box-sizing: border-box; f=
+ont-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inhe=
+rit; margin: 0;" /><span style=3D"box-sizing: border-box; color: #313f4c; f=
+ont-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt=
+; margin: 0;"><br style=3D"box-sizing: border-box; font-family: 'Helvetica =
+Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" />By i=
+tself, just being in a relationship =E2=89=A0 relationship happiness</span>=
+<br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box=
+-sizing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing=
+: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; =
+font-size: inherit; margin: 0;" />And that=E2=80=99s why today, I invite yo=
+u to invest that hard work mentality NOT in recurring arguments, suppressin=
+g happiness or forcing effort through hopelessness=E2=80=A6</span><br style=
+=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box-sizing: =
+border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-=
+box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size=
+: inherit; margin: 0;" /><span style=3D"box-sizing: border-box; color: #1dd=
+8f4; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size=
+: inherit; margin: 0;"><a style=3D"-ms-word-break: break-all; box-sizing: b=
+order-box; color: #1dd8f4; font-family: 'Helvetica Neue', Helvetica, Arial,=
+ sans-serif; font-size: inherit; margin: 0; overflow-wrap: break-word; text=
+-decoration: underline; word-break: break-word; word-wrap: break-word;" hre=
+f=3D"http://email.c.kajabimail.net/c/eJwdjsGKwjAURb-m2QyEl8TXJosslM6A6_kASf=
+qe02i0EkOLfz9RuKsD93DIIxJFkbwGDTCAVT1Y1FJJi0oZBwc74nc_wtDtYJLXcAkx3ULK8s5Vz=
+N4hR9btRZYGitq5XZhs7KOOwP2EIvu51sezM_tO_7Rt2ybPaeWVS15WltNya_RNNubrU_BbfiLO=
+jZTXKZFXViE4RIOi-BLutOTHzKFk5QbXqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMRAo">But instea=
+d in creating your own REAL-LIFE relationship happiness</a></span> that giv=
+es you control of creating incredible connection and a mind-blowing sex lif=
+e. <br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; font-size: inherit; margin: 0;" /><br style=3D"bo=
+x-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans=
+-serif; font-size: inherit; margin: 0;" />That introduces you to the ever-e=
+lusive =E2=80=9Chappily ever after=E2=80=9D you=E2=80=99ve been seeking sin=
+ce the day you committed to your partner.</span><br style=3D"box-sizing: bo=
+rder-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font=
+-size: inherit; margin: 0;" /><span style=3D"box-sizing: border-box; color:=
+ #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font=
+-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-box; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin:=
+ 0;" />And if you want to know the clearest, most reliable path towards cre=
+ating the relationship of your dreams=E2=80=A6</span><br style=3D"box-sizin=
+g: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;=
+ font-size: inherit; margin: 0;" /><span style=3D"box-sizing: border-box; c=
+olor: #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;=
+ font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-box; font-fam=
+ily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; ma=
+rgin: 0;" />I invite you to <span style=3D"box-sizing: border-box; color: #=
+1dd8f4; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-s=
+ize: inherit; margin: 0;"><a style=3D"-ms-word-break: break-all; box-sizing=
+: border-box; color: #1dd8f4; font-family: 'Helvetica Neue', Helvetica, Ari=
+al, sans-serif; font-size: inherit; margin: 0; overflow-wrap: break-word; t=
+ext-decoration: underline; word-break: break-word; word-wrap: break-word;" =
+href=3D"http://email.c.kajabimail.net/c/eJwdjsGKwjAURb-m2QyEl8TXJosslM6A6_k=
+ASfqe02i0EkOLfz9RuKsD93DIIxJFkbwGDTCAVT1Y1FJJi0oZBwc74nc_wtDtYJLXcAkx3ULK8s=
+5VzN4hR9btRZYGitq5XZhs7KOOwP2EIvu51sezM_tO_7Rt2ybPaeWVS15WltNya_RNNubrU_Bbf=
+iLOjZTXKZFXViE4RIOi-BLutOTHzKFk5QbXqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMRAo">join th=
+e next group of connection creators and desire builders</a></span> in my br=
+and new program:</span><br style=3D"box-sizing: border-box; font-family: 'H=
+elvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0=
+;" /><span style=3D"box-sizing: border-box; color: #313f4c; font-family: 'H=
+elvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;">=
+<br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;" /><br style=3D"box-s=
+izing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-se=
+rif; font-size: inherit; margin: 0;" /><a href=3D"http://email.c.kajabimail=
+.net/c/eJwdjsGKwjAURb-m2QyEl8TXJosslM6A6_kASfqe02i0EkOLfz9RuKsD93DIIxJFkbwG=
+DTCAVT1Y1FJJi0oZBwc74nc_wtDtYJLXcAkx3ULK8s5VzN4hR9btRZYGitq5XZhs7KOOwP2EIvu=
+51sezM_tO_7Rt2ybPaeWVS15WltNya_RNNubrU_BbfiLOjZTXKZFXViE4RIOi-BLutOTHzKFk5Q=
+bXqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMRAo" style=3D"-ms-word-break: break-all; box-=
+sizing: border-box; color: #348eda; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; margin: 0; overflow-wrap: break-w=
+ord; text-decoration: underline; word-break: break-word; word-wrap: break-w=
+ord;"><img src=3D"https://kajabi-storefronts-production.global.ssl.fastly.n=
+et/kajabi-storefronts-production/sites/53113/images/lx4CJu0nRTG4oQ0lQGKn_Fa=
+cebook_Ad_Thumbnails_7_.png" style=3D"box-sizing: border-box; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin:=
+ 0; max-width: 100%;" /></a><br style=3D"box-sizing: border-box; font-famil=
+y: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; marg=
+in: 0;" /></span><br style=3D"box-sizing: border-box; font-family: 'Helveti=
+ca Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" /><=
+span style=3D"box-sizing: border-box; color: #313f4c; font-family: 'Helveti=
+ca Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;"><br st=
+yle=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; font-size: inherit; margin: 0;" />Five weeks to Fivever Lo=
+ve isn=E2=80=99t one of those fluffy =E2=80=9Ckumbaya=E2=80=9D courses as m=
+uch as it is a meticulously created implementation program.</span><br style=
+=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box-sizing: =
+border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-=
+box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size=
+: inherit; margin: 0;" />It includes 5 rigorously tested phases that will b=
+ring you from:</span><br style=3D"box-sizing: border-box; font-family: 'Hel=
+vetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;"=
+ /><span style=3D"box-sizing: border-box; color: #313f4c; font-family: 'Hel=
+vetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;"><b=
+r style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: inherit; margin: 0;" />=E2=80=9CWhere the h=
+eck do I even START?=E2=80=9D</span><br style=3D"box-sizing: border-box; fo=
+nt-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inher=
+it; margin: 0;" /><span style=3D"box-sizing: border-box; color: #313f4c; fo=
+nt-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt;=
+ margin: 0;">To=E2=80=A6</span><br style=3D"box-sizing: border-box; font-fa=
+mily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; m=
+argin: 0;" /><span style=3D"box-sizing: border-box; color: #313f4c; font-fa=
+mily: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; marg=
+in: 0;">=E2=80=9CWoah! I didn=E2=80=99t think I=E2=80=99d EVER feel these b=
+utterflies again!=E2=80=9D </span><br style=3D"box-sizing: border-box; font=
+-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit=
+; margin: 0;" /><span style=3D"box-sizing: border-box; color: #313f4c; font=
+-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; m=
+argin: 0;"><br style=3D"box-sizing: border-box; font-family: 'Helvetica Neu=
+e', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" /><span s=
+tyle=3D"box-sizing: border-box; color: #1dd8f4; font-family: 'Helvetica Neu=
+e', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;"><a style=
+=3D"-ms-word-break: break-all; box-sizing: border-box; color: #1dd8f4; font=
+-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit=
+; margin: 0; overflow-wrap: break-word; text-decoration: underline; word-br=
+eak: break-word; word-wrap: break-word;" href=3D"http://email.c.kajabimail.=
+net/c/eJwdjsGKwjAURb-m2QyEl8TXJosslM6A6_kASfqe02i0EkOLfz9RuKsD93DIIxJFkbwGD=
+TCAVT1Y1FJJi0oZBwc74nc_wtDtYJLXcAkx3ULK8s5VzN4hR9btRZYGitq5XZhs7KOOwP2EIvu5=
+1sezM_tO_7Rt2ybPaeWVS15WltNya_RNNubrU_BbfiLOjZTXKZFXViE4RIOi-BLutOTHzKFk5Qb=
+Xqv4-Oc0jqv9Nlb-OY6cNmpb_D4PMRAo">You can get the full scoop here, Randy</a=
+>.</span></span><br style=3D"box-sizing: border-box; font-family: 'Helvetic=
+a Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;" /><s=
+pan style=3D"box-sizing: border-box; color: #313f4c; font-family: 'Helvetic=
+a Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;"><br sty=
+le=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Ari=
+al, sans-serif; font-size: inherit; margin: 0;" />Here=E2=80=99s to reclaim=
+ing your incredible relationship=E2=80=A6</span><br style=3D"box-sizing: bo=
+rder-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font=
+-size: inherit; margin: 0;" /><span style=3D"box-sizing: border-box; color:=
+ #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font=
+-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-box; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin:=
+ 0;" />=E2=80=A6and re-directing your hard work to get you there.</span></p=
+>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+">-Lino</span></p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0 0 =
+20px;"><span style=3D"box-sizing: border-box; color: #313f4c; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;=
+"><strong style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', H=
+elvetica, Arial, sans-serif; font-size: inherit; margin: 0;">P.S.</strong> =
+I want to make sure that I don=E2=80=99t take away from your hard-work ment=
+ality that has kept your relationship going for as long as it has.</span><b=
+r style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box-s=
+izing: border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; font-size: 12pt; margin: 0;">Instead, I want you to fi=
+ght against the lies that have been fed to us by the media. </span><br styl=
+e=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box-sizing:=
+ border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border=
+-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-siz=
+e: inherit; margin: 0;" />Since when has never-ending difficulty and sacrif=
+ice EVER been an indication of success in ANY area of life?</span><br style=
+=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box-sizing: =
+border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-=
+box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size=
+: inherit; margin: 0;" />Of course your relationship is going to take work,=
+ but you don=E2=80=99t have to buy into the rallying cry of other couples t=
+hat never learned the tools to make success a smooth ride.</span><br style=
+=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box-sizing: =
+border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-=
+box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size=
+: inherit; margin: 0;" />So I want you to step aside from all the insistenc=
+e on long-term SACRIFICE and DIFFICULTY (blegh) and ask yourself: =E2=80=9C=
+Is my hard-work being used in the right ways?...=E2=80=9D</span><br style=
+=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: inherit; margin: 0;" /><span style=3D"box-sizing: =
+border-box; color: #313f4c; font-family: 'Helvetica Neue', Helvetica, Arial=
+, sans-serif; font-size: 12pt; margin: 0;"><br style=3D"box-sizing: border-=
+box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size=
+: inherit; margin: 0;" /><span style=3D"box-sizing: border-box; color: #1dd=
+8f4; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size=
+: inherit; margin: 0;">=E2=80=9C=E2=80=A6<a style=3D"-ms-word-break: break-=
+all; box-sizing: border-box; color: #1dd8f4; font-family: 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif; font-size: inherit; margin: 0; overflow-wrap=
+: break-word; text-decoration: underline; word-break: break-word; word-wrap=
+: break-word;" href=3D"http://email.c.kajabimail.net/c/eJwdjsGKwjAURb-m2QyE=
+l8TXJosslM6A6_kASfqe02i0EkOLfz9RuKsD93DIIxJFkbwGDTCAVT1Y1FJJi0oZBwc74nc_wtD=
+tYJLXcAkx3ULK8s5VzN4hR9btRZYGitq5XZhs7KOOwP2EIvu51sezM_tO_7Rt2ybPaeWVS15Wlt=
+Nya_RNNubrU_BbfiLOjZTXKZFXViE4RIOi-BLutOTHzKFk5QbXqv4-Oc0jqv9Nlb-OY6cNmpb_D=
+4PMRAo">Or is it time to channel that hard work into strategies and tools t=
+hat make my love game so strong, that sacrifice turns into mutual happiness=
+</a>?=E2=80=9D</span></span></p>
+<p style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif; font-size: inherit; font-weight: normal; margin: 0;">=
+<span style=3D"box-sizing: border-box; color: #313f4c; font-family: 'Helvet=
+ica Neue', Helvetica, Arial, sans-serif; font-size: 12pt; margin: 0;"><br s=
+tyle=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, A=
+rial, sans-serif; font-size: inherit; margin: 0;" />In the future, if you a=
+re not interested in receiving emails related to Five Weeks to Fivever Love=
+,&nbsp;<span style=3D"box-sizing: border-box; color: #1dd8f4; font-family: =
+'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit; margin:=
+ 0;"><a style=3D"-ms-word-break: break-all; box-sizing: border-box; color: =
+#1dd8f4; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-=
+size: inherit; margin: 0; overflow-wrap: break-word; text-decoration: under=
+line; word-break: break-word; word-wrap: break-word;" href=3D"http://email.=
+c.kajabimail.net/c/eJwtT8tuwyAQ_BpzqYQWyAY4cGjlVOq5HxAtYV3TYjsixFL-vvQhzWlm=
+NI8UEFOKIgcNGsCCU0dwqKWSDpUyHl7ciKfjCHY4wEV-0SfFvFAucuUm5tC9LnkbDRNOaKwDVB5=
+TnNARJSJRwtza9TaY50G_dkx5551r2XaWy-MvT1625V-6r7d7FPzTcE5cOlMf55yCcgrBIxoUNV=
+Ra01auM1Mtylvfp338buo5ooX33PjpbRy0QdM_fAPW_kXL">just click here.</a></span>=
+<br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif; font-size: inherit; margin: 0;" /></span></p>
+    </td>
+  </tr>
+
+
+              </table>
+          </td>
+        </tr>
+      </table>
+
+        <table class=3D"footer" width=3D"100%" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"box-sizing: border-box; clear: both; color: #999999; font-=
+family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: inherit;=
+ margin: 0; padding: 20px; width: 100%;">
+          <tr style=3D"box-sizing: border-box; font-family: 'Helvetica Neue=
+', Helvetica, Arial, sans-serif; font-size: inherit; margin: 0;">
+            <td class=3D"aligncenter" style=3D"box-sizing: border-box; font=
+-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; m=
+argin: 0;" align=3D"center" valign=3D"top">
+               =20
+      <a href=3D"http://email.c.kajabimail.net/c/eJxFkElqxDAQRU8jb4JNaZYWWi=
+Q4DVnnAKY0pFux2zayHMjtozSBQC0-Nf560UkZo--yY8AANBiqwEg20MFISrmFFzPKVzWCJgLCM=
+OMn-nzHvAxrqt3NCWWCTpoxH6MWAIJ7moxM1HMUCUO3uFut-0H4M2GXFrjvf1uGsN1bImxrxVCP=
+Jk3zIBlTTR6nP0LJe83bSvgl5kj4SA2VYKXkkjB1zHmfwpLDPNWCYc7rtbXUcqZWPM_HgAUwAbj=
+qjVe-F9Fij9589CikFREjGqq79PvOFNOSv1L5nnJ0_3e64gqucVv2W8KyUKtt43B9AGj2u-rec0=
+1PbyNhXPIG7AeWNGSV" style=3D"-ms-word-break: break-all; box-sizing: border-=
+box; color: #999999; font-family: 'Helvetica Neue', Helvetica, Arial, sans-=
+serif; font-size: 12px; margin: 0; overflow-wrap: break-word; text-decorati=
+on: underline; word-break: break-word; word-wrap: break-word;">Unsubscribe<=
+/a> |
+      Sent by Fivever Love
+      <br style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', H=
+elvetica, Arial, sans-serif; font-size: inherit; margin: 0;" />
+      7926 Valladolid Avenue =E2=80=A2 Las Vegas, Nevada =E2=80=A2 89178
+
+            </td>
+          </tr>
+        </table>
+
+    </div>
+  </td>
+  <td style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helve=
+tica, Arial, sans-serif; font-size: inherit; margin: 0;" valign=3D"top"></t=
+d>
+</tr>
+
+    </table>
+
+  <img width=3D"1px" height=3D"1px" alt=3D"" src=3D"http://email.c.kajabima=
+il.net/o/eJwdjkEOgjAQAF9DLybNbsvS9tCLwYNnH0BKdyPVAoYQE38vep_MDEci5lGVaMAAOP=
+DYgSejUXtCtAHOvqdL14NrWsj6mR5pLHMqVS-yqykaBxkzg3CC0VLbOiJnvLeSwBJ2Sn7wwFLLW=
+7bPUDiiR4JAZEltcUsLr_U1SdoqBheOyv2vz-us9ngru5yufWMs2WPnC4RDMhc"></body>
+</html>
+
+--cd57204ba7694797a68ff0e6fa6df5b7--
